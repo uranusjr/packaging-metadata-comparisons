@@ -10,6 +10,7 @@ Get an idea how various packaging systems declare metadata, in an effort to figu
 * [Dependency Entries](topics/dependency-entries.md)
 * [Dependency Grouping](topics/dependency-grouping.md)
 * [License](topics/license.md)
+* [Version](topics/version.md)
 <!-- topics_gen_finish -->
 
 ## Please help out!
