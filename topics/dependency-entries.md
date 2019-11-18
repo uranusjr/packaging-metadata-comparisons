@@ -1,4 +1,4 @@
-# Declaring Dependency Entries
+# Dependency Entries
 
 ## Goals
 
@@ -10,7 +10,7 @@ Judgements are also made to formats on whether they are able to ultilise the TOM
 
 ### How dependencies are grouped into sections
 
-We only compare how formats declare *each* dependency. How dependencies are grouped into sections (*a la* `extras_require`) is compared in its own document. 
+We only compare how formats declare *each* dependency. How dependencies are grouped into sections (*a la* `extras_require`) is compared in its own document.
 
 ### What tools do with the declarations
 
@@ -63,7 +63,7 @@ If value is an object, it may contain the following entries (all optional):
 * `extras`: A list of strings representing extras the dependency requests.
 
 * `markers`: A string representing the dependency’s environment markers.
-  
+
      * All possible markers except `extra` are available as keys as well, with string values. They are joined with AND on evaluation.
 
 * `file`: A string, specifying this dependency as a URL-based lookup. This conflicts with `version`.

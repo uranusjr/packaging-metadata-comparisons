@@ -1,4 +1,4 @@
-# Grouping Dependencies
+# Dependency Grouping
 
 TODO: Expand the document to include more detailed discussions on each format.
 
