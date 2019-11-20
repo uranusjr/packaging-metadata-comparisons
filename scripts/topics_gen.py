@@ -15,7 +15,7 @@ def find_markdown_title(path: pathlib.Path) -> str:
     Implementation-wise this looks for the first h1 element and returnes its
     content. Only the ATX style (`#`-prefixed) is supported right now.
     """
-    with path.open() as f:
+    with path.open(encoding="utf-8") as f:
         for line in f:
             if not line.startswith("# "):
                 continue
@@ -45,7 +45,7 @@ def iter_topic_lines():
 def iter_result_lines():
     topics_generating = False
 
-    with README_PATH.open() as f:
+    with README_PATH.open(encoding="utf-8") as f:
         for line in f:
             marker = line.strip()
 
@@ -68,7 +68,8 @@ def iter_result_lines():
 def main():
     # Eagerly resolve to ensure rendering is successful.
     lines = list(iter_result_lines())
-    README_PATH.write_text("".join(lines))
+    with README_PATH.open("w", encoding="utf-8", newline="\n") as f:
+        f.writelines(lines)
 
 
 if __name__ == "__main__":
