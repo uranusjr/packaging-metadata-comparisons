@@ -82,3 +82,12 @@ bug reporting.
 
 As for `repository`, there is an extra bit of metadata specifying what kind of
 version control the repository uses.
+
+## Conclusions
+* All tools support:
+  1. Home page
+  2. Repository
+* Everyone but npm supports:
+  1. Home page
+  2. Repository
+  3. Documentation
