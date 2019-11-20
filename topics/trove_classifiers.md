@@ -25,3 +25,4 @@ on the Python requirement and the specified license.
 ## Conclusions
 * All tools accept an arbitrary list of trove classifiers
 * All tools named the field `classifiers`
+* No one requires any classifiers be specified
