@@ -91,3 +91,4 @@ version control the repository uses.
   1. Home page
   2. Repository
   3. Documentation
+* No one required any URLs to be specified
