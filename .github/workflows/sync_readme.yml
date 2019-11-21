@@ -1,0 +1,25 @@
+name: Update Topics in README
+
+'on': [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.7'
+      - name: Render README
+        run: python scripts/topics_gen.py
+      - name: Commit and push changes
+        run: |
+          git config --local user.name 'GitHub Action'
+          git config --local user.email action@github.com
+          if ! git diff-index --quiet HEAD -- README.md; then
+            git add README.md
+            git commit -m "Render README"
+            git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:master
+          fi
