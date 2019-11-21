@@ -10,8 +10,10 @@ Get an idea how various packaging systems declare metadata, in an effort to figu
 * [Dependency Entries](topics/dependency-entries.md)
 * [Dependency Grouping](topics/dependency-grouping.md)
 * [License](topics/license.md)
+* [Long description](topics/long_description.md)
 * [Project URLs](topics/project_urls.md)
 * [Version](topics/version.md)
+* [[Trove classifiers](https://pypi.org/classifiers/)](topics/trove_classifiers.md)
 <!-- topics_gen_finish -->
 
 ## Please help out!
