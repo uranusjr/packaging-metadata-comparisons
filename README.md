@@ -28,5 +28,5 @@ Some projects that are being looked at for comparison:
      - [Pipenv](https://pipenv.kennethreitz.org)
      - [Poetry](https://poetry.eustace.io/)
 - Other languages
-     - [Cargo](https://doc.rust-lang.org/cargo/guide/)
-     - [npm](https://docs.npmjs.com/)
+     - [Cargo](https://doc.rust-lang.org/cargo/guide/) ([`Cargo.toml` spec](https://doc.rust-lang.org/cargo/reference/manifest.html))
+     - [npm](https://docs.npmjs.com/) ([`package.json` spec](https://docs.npmjs.com/files/package.json))
