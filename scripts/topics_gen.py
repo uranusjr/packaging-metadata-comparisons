@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import pathlib
+import re
 import typing
 
 
@@ -23,6 +24,31 @@ def find_markdown_title(path: pathlib.Path) -> str:
     return ""
 
 
+LINK = r"\[(?P<text>[^\]]+)\]\([^\)]+\)"
+TEXT = r".+"
+
+
+def clean_up_markdown_title(s: str) -> str:
+    """Perform cleanups so the collected title line can be used to form a link.
+
+    I don't want to pull in a full Markdown parser just for this. A simple
+    regex scanner will do; we'll refine this as we need along the way.
+    """
+    def _handle_link(scanner, token):
+        return re.fullmatch(LINK, token).group("text")
+
+    def _handle_text(scanner, token):
+        return token
+
+    scanner = re.Scanner([
+        (LINK, _handle_link),
+        (TEXT, _handle_text),
+    ])
+    results, remainder = scanner.scan(s)
+
+    return "".join(results)
+
+
 def iter_topics(root: pathlib.Path) -> typing.Iterator[Topic]:
     for path in root.iterdir():
         if path.suffix != ".md" or not path.is_file():
@@ -30,6 +56,7 @@ def iter_topics(root: pathlib.Path) -> typing.Iterator[Topic]:
         title = find_markdown_title(path)
         if not title:
             continue
+        title = clean_up_markdown_title(title)
         yield Topic(title, path)
 
 

@@ -1,4 +1,4 @@
-# [Trove classifiers](https://pypi.org/classifiers/)
+# [Trove Classifiers](https://pypi.org/classifiers/)
 
 ## Goals
 To have a way to specify arbitrary trove classifiers.
