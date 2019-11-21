@@ -22,4 +22,4 @@ jobs:
             git add README.md
             git commit -m "Render README"
             git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:master
-          fi
+          fi || true
