@@ -6,6 +6,8 @@ find documentation, file bugs, etc.
 For PyPI there are no required or suggested URLs, although there is special
 [support for certain URL names that lead to specific icons](https://github.com/pypa/warehouse/blob/master/warehouse/templates/packaging/detail.html).
 
+Hugo van Kemenade also did a [similar investigation on this topic](https://github.com/hugovk/pypi-tools/issues/11) for the pypi-tools project.
+
 ## Goals
 
 Provide a way to specify multiple URLs for a project.
@@ -76,7 +78,9 @@ complete (e.g. [GitHub Actions](https://github.com/features/actions) went public
 the week prior to when this was written and it is not supported yet).
 
 ### npm
+
 There is support for a restricted set of URLs for a project:
+
 - [`homepage`](https://docs.npmjs.com/files/package.json#homepage)
 - [`bugs`](https://docs.npmjs.com/files/package.json#bugs)
 - [`repository`](https://docs.npmjs.com/files/package.json#repository)
@@ -88,11 +92,12 @@ As for `repository`, there is an extra bit of metadata specifying what kind of
 version control the repository uses.
 
 ## Conclusions
+
 * All tools support:
-  1. Home page
-  2. Repository
+     1. Home page
+     2. Repository
 * Everyone but npm supports:
-  1. Home page
-  2. Repository
-  3. Documentation
+     1. Home page
+     2. Repository
+     3. Documentation
 * No one required any URLs to be specified
