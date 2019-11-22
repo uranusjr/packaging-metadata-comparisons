@@ -9,6 +9,7 @@ Get an idea how various packaging systems declare metadata, in an effort to figu
 <!-- topics_gen_start -->
 * [Dependency Entries](topics/dependency-entries.md)
 * [Dependency Grouping](topics/dependency-grouping.md)
+* [Include/Exclude Files](topics/files.md)
 * [License](topics/license.md)
 * [Long description](topics/long_description.md)
 * [Project URLs](topics/project_urls.md)
