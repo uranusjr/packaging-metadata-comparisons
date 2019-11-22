@@ -38,9 +38,13 @@ Like Flit, Setuptools supports both a generic `url` field as well as a
 
 Support exists for restricted set of URLs:
 
-- [`homepage`](https://poetry.eustace.io/docs/pyproject/#homepage)
-- [`repository`](https://poetry.eustace.io/docs/pyproject/#repository)
-- [`documentation`](https://poetry.eustace.io/docs/pyproject/#documentation)
+- [`homepage`](https://poetry.eustace.io/docs/pyproject/#homepage)  (mapped to Home-page)
+- [`repository`](https://poetry.eustace.io/docs/pyproject/#repository) (mapped to Repository of Project-URL)
+- [`documentation`](https://poetry.eustace.io/docs/pyproject/#documentation) (mapped to Documentation of Project-URL)
+
+Beta version of Poetry support custom urls in metadata (since [1.0.0a4](https://github.com/sdispater/poetry/releases/tag/1.0.0a4) version) that placed [under tool.poetry.urls section](https://github.com/sdispater/poetry/pull/1137). 
+
+Note: If under this section will be used the same keyword (case sensitive) values defined under tool.poetry section will be overridden.
 
 ### Cargo
 
