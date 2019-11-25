@@ -12,17 +12,21 @@ Specify a package version that can be used by package managers at install time, 
 
 ### Setuptools (vanilla)
 
-Setuptools by default does not make any efforts in this regard. The user is expected to pass a string to `setup()`, and that’s it. You need to either duplicate the value in code if you want to read the value, or use `pkg_resources` to read out the installed metadata.
+Setuptools only concerns itself with metadata, the version passed in for the `setup()` is only transfered into the package metadata.
+Making it availiable as a variable is expected to be solved by the maintainer.
+
+Its generally suggested to query the package metadata for the version to ensure a single source of truth.
+Commonly `pkg_resources` or `importlib_metadata` are suggested tools to facilitate this transfer.
 
 #### Advantages
 
-… None?
+Singles source of truth.
 
 #### Disadvantages
 
-The `pkg_resources` approach does not work unless there is sufficient metadata, so you’re coupling you package to compatible package managers. This is a problem if you want to re-package for another ecosystem (e.g. Conda, Debian) or vendor the code.
+The usage of the python metadataa system requires adequate packaging and usage of runtime dependencies, this is not always desirable.
+When wanting to use Direct metadata, the version number needs to be maintained in multiple places.
 
-If you don’t want to use `pkg_resources` you’d need to duplicate the version number, and it is a big effort to always keep both occurrences up-to-date.
 
 ### Setuptools: `setuptools_scm`
 
@@ -35,14 +39,22 @@ setup(
     setup_requires=['setuptools_scm'],
 )
 ```
-
+or
+```toml
+# pyproject.toml
+[build-system]
+requires = ["setuptools>=42", "wheel", "setuptools_scm[toml]>=3.4"]
+[tools.setuptools_scm]
+write_to = "src/myproject/_version.py"
+```
 #### Advantages
 
 Has the unique ability to keep the SCM and package metadata in sync, which non of the rest entries could IIUC.
+Can create and update direct metadata.
 
 #### Disadvantages
 
-No way to keep the definition in code in sync with metadata. The recommended way by maintainers is to use `pkg_resources`, which inherits all the problems from vanilla Setuptools.
+Couples Version metadata with SCM metadata, which is problematic in certain packaging setups.
 
 ### Setuptools: `setup.py` imports the package at build time
 
