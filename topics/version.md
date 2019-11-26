@@ -12,11 +12,9 @@ Specify a package version that can be used by package managers at install time, 
 
 ### Setuptools (vanilla)
 
-Setuptools only concerns itself with metadata, the version passed in for the `setup()` is only transfered into the package metadata.
-Making it availiable as a variable is expected to be solved by the maintainer.
+Setuptools only concerns itself with metadata, the version passed in for the `setup()` is only transfered into the package metadata. Making it availiable as a variable is expected to be solved by the maintainer.
 
-Its generally suggested to query the package metadata for the version to ensure a single source of truth.
-Commonly `pkg_resources` or `importlib_metadata` are suggested tools to facilitate this transfer.
+It is generally suggested to query the package metadata for the version to ensure a single source of truth. Commonly `pkg_resources` or `importlib_metadata` are suggested tools to facilitate this transfer.
 
 #### Advantages
 
