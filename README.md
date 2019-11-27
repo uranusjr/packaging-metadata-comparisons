@@ -26,10 +26,10 @@ Please file a pull request!
 Some projects that are being looked at for comparison:
 
 - Python
-     - [Flit](https://flit.readthedocs.io/)
-     - [Setuptools](https://setuptools.readthedocs.io)
-     - [Pipenv](https://pipenv.kennethreitz.org)
-     - [Poetry](https://poetry.eustace.io/)
+     - [Flit](https://flit.readthedocs.io/) ([`pyproject.toml` details](https://flit.readthedocs.io/en/latest/pyproject_toml.html))
+     - [Setuptools](https://setuptools.readthedocs.io) ([metadata table](https://setuptools.readthedocs.io/en/latest/setuptools.html#metadata))
+     - [Poetry](https://poetry.eustace.io/) ([`pyproject.toml` details](https://poetry.eustace.io/docs/pyproject/))
+     - [Pipenv](https://pipenv.kennethreitz.org) (for dependency _usage_, not building of wheels)
 - Other languages
      - [Cargo](https://doc.rust-lang.org/cargo/guide/) ([`Cargo.toml` spec](https://doc.rust-lang.org/cargo/reference/manifest.html))
      - [npm](https://docs.npmjs.com/) ([`package.json` spec](https://docs.npmjs.com/files/package.json))
