@@ -11,6 +11,7 @@ Get an idea how various packaging systems declare metadata, in an effort to figu
 * [Dependency Entries](topics/dependency-entries.md)
 * [Dependency Grouping](topics/dependency-grouping.md)
 * [Include/Exclude Files](topics/files.md)
+* [Keywords](topics/keywords.md)
 * [License](topics/license.md)
 * [Long description](topics/long_description.md)
 * [Project Name](topics/project_name.md)
