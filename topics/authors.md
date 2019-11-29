@@ -26,7 +26,7 @@ maintainer.
 Has an [`authors` field](https://poetry.eustace.io/docs/pyproject/#authors) which
 is an array of `name <email>` entries.
 
-### Rust
+### Cargo
 Has an [`authors` field](https://doc.rust-lang.org/cargo/reference/manifest.html#the-authors-field-optional)
 which is an array of authors. Email addresses are optional and may be included
 via the `name <email>` format.
