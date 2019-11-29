@@ -14,10 +14,6 @@ which only support a single author.
 It also has `maintainer` and `maintainer-email` fields to support a single
 maintainer.
 
-When the import name matches the project name, the
-[`module` field](https://flit.readthedocs.io/en/latest/pyproject_toml.html)
-which also specifies the code to include in a wheel is used automatically.
-
 ### Setuptools
 Has
 [`author` and `author_email` fields](https://setuptools.readthedocs.io/en/latest/setuptools.html#metadata)
