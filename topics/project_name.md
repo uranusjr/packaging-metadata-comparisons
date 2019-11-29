@@ -24,7 +24,7 @@ Has a [`name` field](https://poetry.eustace.io/docs/pyproject/#name).
 This field also provides a default package name to figure out what code to put
 into a wheel.
 
-### Rust
+### Cargo
 Has a [`name` field](https://doc.rust-lang.org/cargo/reference/manifest.html#the-name-field).
 
 Acts as the default name to infer the build names.
