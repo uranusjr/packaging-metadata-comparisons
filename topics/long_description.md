@@ -1,4 +1,4 @@
-# Long description
+# Long Description
 
 ## Goals
 Provide a way to include the long description as shown by a package index

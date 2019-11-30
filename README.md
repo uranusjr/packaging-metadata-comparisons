@@ -13,7 +13,7 @@ Get an idea how various packaging systems declare metadata, in an effort to figu
 * [Include/Exclude Files](topics/files.md)
 * [Keywords](topics/keywords.md)
 * [License](topics/license.md)
-* [Long description](topics/long_description.md)
+* [Long Description](topics/long_description.md)
 * [Project Name](topics/project_name.md)
 * [Project URLs](topics/project_urls.md)
 * [Trove Classifiers](topics/trove_classifiers.md)
