@@ -10,6 +10,7 @@ Get an idea how various packaging systems declare metadata, in an effort to figu
 * [Authors](topics/authors.md)
 * [Dependency Entries](topics/dependency-entries.md)
 * [Dependency Grouping](topics/dependency-grouping.md)
+* [Entry Points](topics/entry-pints.md)
 * [Include/Exclude Files](topics/files.md)
 * [Keywords](topics/keywords.md)
 * [License](topics/license.md)
