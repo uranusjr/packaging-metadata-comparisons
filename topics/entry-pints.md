@@ -45,7 +45,6 @@ There is an `entrypoints` section in the same format (but in TOML):
 
 ```toml
 [tool.flit.entrypoints."mypackage.customgroup"]
-
 foo = "mypackage.plugins:foo"
 ```
 
