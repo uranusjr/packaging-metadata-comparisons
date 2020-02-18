@@ -40,8 +40,8 @@ mapped directly.
 
 ### Poetry
 Has an [`authors` field](https://poetry.eustace.io/docs/pyproject/#authors) which
-is an array of `name <email>` entries. It is not clear how this field is mapped
-into core metadata fields.
+is an array of `name <email>` entries. However, only the first entry of `authors` or `maintainers`
+is kept when mapped to the core metadata.
 
 ### Cargo
 Has an [`authors` field](https://doc.rust-lang.org/cargo/reference/manifest.html#the-authors-field-optional)
