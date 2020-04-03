@@ -14,11 +14,11 @@ Specify a package version that can be used by package managers at install time, 
 
 Setuptools only concerns itself with metadata, the version passed in for the `setup()` is only transfered into the package metadata. Making it availiable as a variable is expected to be solved by the maintainer.
 
-It is generally suggested to query the package metadata for the version to ensure a single source of truth. Commonly `pkg_resources` or `importlib_metadata` are suggested tools to facilitate this transfer.
+It is generally suggested to query the package metadata for the version to ensure a single source of truth. Commonly `pkg_resources` or `importlib_metadata` are suggested tools to facilitate this transfer. The overhead of this can be mitigated with a `__getattr__()` module function, but that is only supported in Python 3.7 and newer.
 
 #### Advantages
 
-Singles source of truth.
+Single source of truth.
 
 #### Disadvantages
 
@@ -52,7 +52,7 @@ Can create and update direct metadata.
 
 #### Disadvantages
 
-Couples Version metadata with SCM metadata, which is problematic in certain packaging setups.
+Couples Version metadata with SCM metadata, which is problematic in certain packaging setups. Also requires executing commands to get the version information at build time.
 
 ### Setuptools: `setup.py` imports the package at build time
 
