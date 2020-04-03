@@ -8,7 +8,7 @@ TODO: Expand the document to include more detailed discussions on each format.
 | Pipfile                                                                     | Inline             | Group                      |
 | Poetry                                                                      | Inline             | Inline<sup>2</sup>         |
 | Flit                                                                        | Inline             | Group                      |
-| Setuptools                                                                  | Inline<sup>3</sup> | Group<sup>5</sup>          |
+| Setuptools                                                                  | Inline<sup>3</sup> | Group<sup>4</sup>          |
 | Cargo                                                                       | Group              | Group + Inline<sup>5</sup> |
 | package.json                                                                | *Not possible*     | Group                      |
 
