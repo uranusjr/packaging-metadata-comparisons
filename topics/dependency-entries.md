@@ -91,7 +91,7 @@ Using keys to express context (e.g. `version` and `file`) also means that it is 
 
 This is probably just personal taste, but I really dislike the `*` specifier.  I would’ve be much happier if it chose to use an empty string instead.
 
-### [Poetry](https://poetry.eustace.io/docs/versions/)
+### [Poetry](https://python-poetry.org/docs/dependency-specification/)
 
 ```toml
 requests = "^2.13.0"
@@ -122,13 +122,7 @@ It is also possible to express the same-package-different-marker problem with th
 
 #### Disadvantages
 
-It is only possible to mark a dependency conditional to Python versions (which translates to `python_version`markers), not anything else.
-
-Not possible to provide a URL-based lookup.
-
 Not possible to specify extras.
-
-The documentation is a bit lacking compared to most other formats mentioned in this document.
 
 This is probably just personal taste, but I really dislike the `*` specifier. I would’ve be much happier if it chose to use an empty string instead.
 
