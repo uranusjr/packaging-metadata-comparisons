@@ -2,7 +2,7 @@
 
 ## Goals
 
-To have a way to let the user, after installing the package, can invoke a certain function in it without necessarily knowing where and how the function is declared or implemented.
+To have a way to let the user, after installing the package, invoke a certain function in it without necessarily knowing where and how the function is declared or implemented.
 
 The most common form of this functionality are command scripts. A command script declaration would create an executable on install time, which invokes the specified function in the specified environment when executed.
 
