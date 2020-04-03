@@ -6,8 +6,8 @@ TODO: Expand the document to include more detailed discussions on each format.
 | --------------------------------------------------------------------------- | ------------------ | -------------------------- |
 | [Core metadata](https://packaging.python.org/specifications/core-metadata/) | Inline             | Inline<sup>1</sup>         |
 | Pipfile                                                                     | Inline             | Group                      |
-| Poetry                                                                      | Inline             | Inline<sup>2</sup>         |
-| Flit                                                                        | Inline             | Group<sup>6</sup>          |
+| [Poetry](https://python-poetry.org/docs/pyproject/#extras)                  | Inline             | Inline<sup>2</sup>         |
+| [Flit](https://flit.readthedocs.io/en/latest/pyproject_toml.html#metadata-section)| Inline       | Group<sup>6</sup>          |
 | Setuptools                                                                  | Inline<sup>3</sup> | Group<sup>4</sup>          |
 | Cargo                                                                       | Group              | Group + Inline<sup>5</sup> |
 | package.json                                                                | *Not possible*     | Group                      |
