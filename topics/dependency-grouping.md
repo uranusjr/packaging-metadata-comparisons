@@ -7,7 +7,7 @@ TODO: Expand the document to include more detailed discussions on each format.
 | [Core metadata](https://packaging.python.org/specifications/core-metadata/) | Inline             | Inline<sup>1</sup>         |
 | Pipfile                                                                     | Inline             | Group                      |
 | Poetry                                                                      | Inline             | Inline<sup>2</sup>         |
-| Flit                                                                        | Inline             | Group                      |
+| Flit                                                                        | Inline             | Group<sup>6</sup>          |
 | Setuptools                                                                  | Inline<sup>3</sup> | Group<sup>4</sup>          |
 | Cargo                                                                       | Group              | Group + Inline<sup>5</sup> |
 | package.json                                                                | *Not possible*     | Group                      |
@@ -34,3 +34,5 @@ setup(
 but AFAICT this is not proper configuration, just “happens to work.”
 
 <sup>5</sup> Dev dependencies are declared separately in their own group. Other logically grouped dependencies (call *features*) are listed together with required ones (with `optional = true`), and are then grouped by a seperate `features` definition.
+
+<sup>6</sup> Flit has [reserved groups for `test`, `doc`, and `dev`](https://flit.readthedocs.io/en/latest/pyproject_toml.html#metadata-section). They are all installed when one [installs the `develop` dependencies](https://flit.readthedocs.io/en/latest/cmdline.html#cmdoption-flit-install-deps).
